@@ -1,6 +1,5 @@
 console.log("potatoes")
 
-
 $(document.ready)(function(){
 
 
