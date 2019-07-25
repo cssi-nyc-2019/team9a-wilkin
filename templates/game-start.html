@@ -2,10 +2,10 @@
 <html>
 <head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    <title>TRIVIA RUN</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/styleDir/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Trivia Game</title>
     <link rel="stylesheet" type="text/css" href="/styleDir/styles.css"> 
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -33,24 +33,25 @@
       </div>
     </div>
   </div>
-</div>    
+</div>        
+    <!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.js"> </script> -->
 <script>
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
+    ctx.font = "20px Courier New";
     var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
-    ctx.font = "20px Courier New"
     gradient.addColorStop("0", "white");
     gradient.addColorStop("0.5", "white");
     gradient.addColorStop("1.0", "white");
     ctx.fillStyle = gradient;
-    ctx.fillText("– – – – – – – – – – – – ", 52, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 250, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 470, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 680, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 52, 550);
-    ctx.fillText("– – – – – – – – – – – – ", 250, 550);
-    ctx.fillText("– – – – – – – – – – – – ", 470, 550);
-    ctx.fillText("– – – – – – – – – – – – ", 680, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 52, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 250, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 470, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 680, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 52, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 250, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 470, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 680, 550);
     ctx.fillStyle = "#980000";
     ctx.fillRect(40, 40, 85, 85);
     ctx.fillRect(250, 40, 85, 85);
@@ -67,9 +68,9 @@
     ctx.stroke();
     ctx.stroke();
     ctx.stroke();
-
 </script>
 
+<!-- Code for the basic structure of the question card -->
 <h1 id="question"> </h1>
     <div class="cardWrap">
         <!-- div for the "inner flipping card" -->
@@ -89,14 +90,10 @@
                     <input class="btn" type="submit" value="Sumbit Answer">
                 </form>
             </div>
-
-
-
-
 </body>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/javaS/script.js"></script>
+     <script src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+     <script src="/javaS/script.js"></script>
 </html>
 
- 
+
+
