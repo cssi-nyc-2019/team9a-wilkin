@@ -2,15 +2,15 @@
 <html>
 <head>
 
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="/styleDir/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>Trivia Game</title>
+   <title>TRIVIA RUN</title>
     <link rel="stylesheet" type="text/css" href="/styleDir/styles.css"> 
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 
 </head>
 <body>
+<body onload="">
     <h1>☠️ Trivia Run ☠️</h1>
     <!-- Back button code  -->
     <a href="/"> <button id= "button-back" type="button">BACK</button> </a>
@@ -33,24 +33,24 @@
     </div>
   </div>
 </div>        
-    <!-- <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.js"> </script> -->
+    
 <script>
-    var c = document.getElementById("myCanvas");
+        var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
-    ctx.font = "20px Courier New";
-    var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+     var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+    ctx.font = "20px Courier New"
     gradient.addColorStop("0", "white");
     gradient.addColorStop("0.5", "white");
     gradient.addColorStop("1.0", "white");
     ctx.fillStyle = gradient;
-    ctx.fillText("– – – – – – – – – – – – ", 52, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 250, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 470, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 680, 87);
-    ctx.fillText("– – – – – – – – – – – – ", 52, 550);
-    ctx.fillText("– – – – – – – – – – – – ", 250, 550);
-    ctx.fillText("– – – – – – – – – – – – ", 470, 550);
-    ctx.fillText("– – – – – – – – – – – – ", 680, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 52, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 250, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 470, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 680, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 52, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 250, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 470, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 680, 550);
     ctx.fillStyle = "#980000";
     ctx.fillRect(40, 40, 85, 85);
     ctx.fillRect(250, 40, 85, 85);
@@ -68,31 +68,21 @@
     ctx.stroke();
     ctx.stroke();
 </script>
-
-<!-- Code for the basic structure of the question card -->
-<h1 id="question"> </h1>
-    <div class="cardWrap">
-        <!-- div for the "inner flipping card" -->
-        <div class="flip-inner">
-            <div class="front">
-                <h1> ? </h1>
-            </div>
-            <div class="back">
-                <!-- API info for the first question will go in these tags --> 
-                
-                
-                <form method="post">
+    <div class="flip-card">
+        <div id="card">
+            <h1 id="question"> </h1>
+                <form>
                     <select name="questionForm">
-                        <option value="true"> True </option>
-                     <option value="false"> False </option>
+                        <option id="true"value="true"> True </option>
+                        <option id="false"value="false"> False </option>
                     </select>
-                    <input class="btn" type="submit" value="Sumbit Answer">
+                    <input id="submit"type="submit" value="Sumbit Answer">
                 </form>
-            </div>
+           </div>
+    </div>
+
+
 </body>
-     <script src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
-     <script src="/javaS/script.js"></script>
 </html>
 
-
-
+ 
