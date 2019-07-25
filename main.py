@@ -2,7 +2,9 @@
 import webapp2
 import jinja2
 import os
+from models import User
 from quiz import quiz 
+
 # this initializes the jinja2 environment
 # this will be the same in every app that uses the jinja2 templating library 
 the_jinja_env = jinja2.Environment(
@@ -20,6 +22,14 @@ class MainHandler(webapp2.RequestHandler):
   def get(self):  # for a get request
     start_template = the_jinja_env.get_template('templates/index.html')  # path to index.html
     self.response.write(start_template.render()) # render index.html
+  def post(self):
+    username=self.request.get('username')
+    password=self.request.get('password')     
+    user=User(username=username)
+    user.put()
+ 
+    start_template = the_jinja_env.get_template('templates/index.html')
+    self.response.write(start_template.render())    
 
 class GameHandler(webapp2.RequestHandler):
   def get(self):
@@ -40,11 +50,23 @@ class InstructionsHandler(webapp2.RequestHandler):
 
 
 
+class ScoreHandler(webapp2.RequestHandler):
+   def get(self):
+    score_template = the_jinja_env.get_template('templates/scoreboard.html')
+    self.response.write(score_template.render())
+        
+class SignupHandler(webapp2.RequestHandler):
+  def get(self):
+    sign_template = the_jinja_env.get_template('templates/signup.html')
+    self.response.write(sign_template.render())
+    
 
 # the app configuration section	
 app = webapp2.WSGIApplication([
   ('/', MainHandler),
   ('/game', GameHandler),
+  ('/score', ScoreHandler),
+  ('/signup',SignupHandler),
   ('/login', LoginHandler),
   ('/instructions', InstructionsHandler)
   ], debug=True)
