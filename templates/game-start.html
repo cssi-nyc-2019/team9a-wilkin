@@ -7,9 +7,10 @@
     <title>TRIVIA RUN</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="/styleDir/styles.css"> 
-    <script src="/javaS/script.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
 </head>
-<body onload="">
+<body>
     <h1>☠️ Trivia Run ☠️</h1>
     <!-- Back button code  -->
     <a href="/"> <button id= "button-back" type="button">BACK</button> </a>
@@ -21,11 +22,9 @@
     </div>
     <div class="area">
       <div class="row">
-        <div class="add-damage btn" type="button">False</div>
-        <div class="add-heal btn" type="button">True</div>
       </div>
       <div class="total"></div>
-      <div class="message-box col-md-12">Make your move!</div>
+      <div class="message-box col-md-12"><p>Make your move!</p></div>
       <div class="health-box">
         <div class="health-bar-red"></div>
         <div class="health-bar-blue"></div>
@@ -38,6 +37,20 @@
 <script>
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
+    var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+    ctx.font = "20px Courier New"
+    gradient.addColorStop("0", "white");
+    gradient.addColorStop("0.5", "white");
+    gradient.addColorStop("1.0", "white");
+    ctx.fillStyle = gradient;
+    ctx.fillText("– – – – – – – – – – – – ", 52, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 250, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 470, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 680, 87);
+    ctx.fillText("– – – – – – – – – – – – ", 52, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 250, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 470, 550);
+    ctx.fillText("– – – – – – – – – – – – ", 680, 550);
     ctx.fillStyle = "#980000";
     ctx.fillRect(40, 40, 85, 85);
     ctx.fillRect(250, 40, 85, 85);
@@ -81,6 +94,9 @@
 
 
 </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/javaS/script.js"></script>
 </html>
 
  

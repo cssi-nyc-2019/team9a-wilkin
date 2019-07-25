@@ -12,7 +12,15 @@
 	border: solid;
 
 }
-
+#username{
+    text-align: center;
+    color:white;
+    justify-content: center;
+    font-family: 'Press Start 2P';
+    text-shadow: 2px 3px grey;
+    margin-left: 480px; 
+    font-size: 45px;
+}
 
 #button-start{
 	background-color:#8B0000;
@@ -158,22 +166,6 @@ p {
   margin: auto;
 }
 
-.btn {
-  text-align: center;
-  width: 100px;
-  background-color: grery;
-  border: 2px solid black;
-  padding: 20px;
-  display: inline-block;
-  margin: 30px 10px;
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
-  cursor: pointer;
-}
-
 .health-box {
   background-color: red;
   height: 30px;
@@ -214,8 +206,7 @@ p {
   padding: 5px;
 }
 
-.total,
-.message-box {
+.total,.message-box {
   font-size: 16px;
   margin: 5px;
 }
