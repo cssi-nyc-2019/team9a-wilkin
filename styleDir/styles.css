@@ -1,5 +1,4 @@
 
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 /*This is for the style of the buttons on the home page */
  #button-instructions{
 
@@ -158,10 +157,10 @@ p{
 #card{
   background-color:#980000;
   margin-bottom: 650px;
-  width:200px;
-  height: 80px;
+  width:300px;
+  height: 180px;
   top: 360px;
-  margin-left:650px;
+  margin-left:600px;
   position: absolute;
 
 }
