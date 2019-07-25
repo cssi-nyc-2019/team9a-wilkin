@@ -38,9 +38,7 @@ class InstructionsHandler(webapp2.RequestHandler):
 	inst_template = the_jinja_env.get_template('templates/instructions.html') 
 	self.response.write(inst_template.render()) 
 
-#health = 10
-#if answer==correct
-#	health -=
+
 
 
 # the app configuration section	
